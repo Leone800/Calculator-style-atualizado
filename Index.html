@@ -1,1 +1,173 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>calculator style</title>
+  <link rel="stylesheet" href="print.css" media="print">
+  <link rel="import" href="component.html">
+  <style>
+    * {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  outline: none;
+}
+body{
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(360, 100%, 100%, 1)
+}
+
+.calculator {
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px #000000, 5px 5px 12px rgba(0, 0, 0, .16);
+  display: grid;
+  grid-template-columns: repeat(4, 68px);
+  opacity: 0.8;
+  
+}
+
+input {
+  grid-column: span 4;
+  height: 70px;
+  widows: 380px;
+  background-color: #FEFEFF;
+  box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px rgba(0, 0, 0, .16);
+  border: none;
+  border-radius: 30px;
+  color: rgb(70, 70, 70);
+  font-size: 50px;
+  text-align: end;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+
+button {
+  height: 48px;
+  width: 48px;
+  background-color: #616165;
+  color: #FFFFFF;
+  box-shadow: -5px -5px 12px #000000, 5px 5px 12px rgba(0, 0, 0, .16);
+  border: none;
+  border-radius: 50%;
+  margin: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+
+
+.equal {
+  width: 115px;
+  border-radius: 40px;
+  background-color: #616165;
+  color: #FFFFFF;
+  box-shadow: -5px -5px 12px #000000, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+button:hover{
+  cursor: pointer;
+}
+img{
+ height: 20px;
+ border-radius: 120px;
+ font-size: 120px;
+ 
+}
+.gt{
+  border-radius: 120px;
+  height: 20px;
+  background-color: black;
+}
+.gr{
+  height: 20px;
+  border-radius: 20px;
+  background-color: black;
+}
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+     
+      <input type="tel" placeholder="0" id="output-screen">
+      
+      <button onclick="clr()">AC</button>
+      <button onclick="del()"><</button>
+      <button onclick="display('%')">%</button>
+      <button onclick="display('/')">/</button>
+      <button onclick="display('7')">7</button>
+      <button onclick="display('8')">8</button>
+      <button onclick="display('9')">9</button>
+      <button onclick="display('*')">*</button>
+      <button onclick="display('4')">4</button>
+      <button onclick="display('5')">5</button>
+      <button onclick="display('6')">6</button>
+      <button onclick="display('-')">-</button>
+      <button onclick="display('1')">1</button>
+      <button onclick="display('2')">2</button>
+      <button onclick="display('3')">3</button>
+      <button onclick="display('+')">+</button>
+      <button onclick="display('0')">0</button>
+      <button onclick="display"('.')>.</button>
+      
+      <button onclick="calculate()" class="equal">=</button>
+      
+    </div>
+  </div>
+
+  <script>
+  
+  let outputscreen = document.getElementById('output-screen');
+  
+function display(num){
+  outputscreen.value += num 
+}
+
+function calculate(){
+  try {
+     outputscreen.value = eval(outputscreen.value)
+   }
+   catch (err) {
+    alert('erro')
+     
+   }
+ }
+ 
+function clr() {
+  outputscreen.value = ''
+}
+
+function del() {
+  outputscreen.value = outputscreen.value.slice(0, -1)
+}
+
+  </script>
+</body>
+
+    </html>
+        
