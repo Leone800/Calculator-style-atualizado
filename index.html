@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>calculator 2000</title>
+</head>
+<body>
+  <div id="initial">
+    <div id="icon-themes">
+      <p id="texting">2+ <p id="color-2">3</p><p>= 5</p></p>
+      </div>
+  </div>
+  
+  <div id="container">
+     <div id="resultado">
+      
+    <p id="numbers"><span id="bar">|</span></p>
+    </div>
+    
+    <div id="calculator">
+      
+    <div id="error">
+  <p id="notacao"></p>
+    </div>
+    
+      <button onclick="clr()" id="button">AC</button>
+      <button onclick="del()" id="button"><</button>
+      <button onclick="display('%')" id="button">%</button>
+      <button onclick="display('/')" id="button">/</button>
+      <button onclick="display('7')" id="button">7</button>
+      <button onclick="display('8')" id="button">8</button>
+      <button onclick="display('9')" id="button">9</button>
+      <button onclick="display('*')" id="button">*</button>
+      <button onclick="display('4')" id="button">4</button>
+      <button onclick="display('5')" id="button">5</button>
+      <button onclick="display('6')" id="button">6</button>
+      <button onclick="display('-')" id="button">-</button>
+      <button onclick="display('1')" id="button">1</button>
+      <button onclick="display('2')" id="button">2</button>
+      <button onclick="display('3')" id="button">3</button>
+      <button onclick="display('+')" id="button">+</button>
+      <button onclick="display('0')" id="button">0</button>
+      <button onclick="display(',')" id="button">,</button>
+      
+      <button onclick="calculate()" class="equal" id="button">=</button>
+  </div>
+  </div>
+  <script src="/script.js"></script>
+  <script src="/aprimoramento.js"></script>
+</body>
+</html>
